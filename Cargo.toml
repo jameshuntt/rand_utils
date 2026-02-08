@@ -1,0 +1,18 @@
+[package]
+name = "rand_utils"
+version = "0.1.0"
+edition = "2024"
+
+license = "MIT OR Apache-2.0"
+description = "helpers for large randon number generation"
+
+authors = ["James Hunt <jameshuntdevelopment@gmail.com>"]
+repository = "https://github.com/jameshuntt/rand_utils"
+
+[dependencies]
+rand = "0.9.0"
+num-bigint = { version = "0.4.6", features = ["rand"] }
+
+honest = "0.1.4"
+num-traits = "0.2.19"
+secrecy = "0.10.3"
