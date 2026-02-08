@@ -1,20 +1,13 @@
 // crates/shamirs_secret_sharing/src/rand_utils/traits.rs
 
-use num_bigint::{
-    BigInt,
-    BigUint
-};
-use rand::{
-    CryptoRng,
-    RngCore
-};
-use secrecy::SecretBox;
-
 use honest::types::secure_types::{
     SecretBigUint,
     SecureBigInt,
     SecureBigUint
 };
+use num_bigint::{BigInt, BigUint};
+use rand::{CryptoRng, RngCore};
+use secrecy::SecretBox;
 
 pub trait BigUintGenerator {
     fn gen_biguint_below(&mut self, upper: &BigUint) -> BigUint;

@@ -2,19 +2,15 @@
 
 // crates/shamirs_secret_sharing/src/rand_utils/implementation.rs
 
-use rand::{
-    rngs::OsRng,
-    TryRngCore
-};
+use honest::types::secure_types::SecureBigUint;
 use num_bigint::BigUint;
+use rand::{rngs::OsRng, TryRngCore};
 use secrecy::SecretBox;
 
 use crate::traits::{
-        BigUintGenerator,
-        SecureBigUintGenerator
-    };
-
-    use honest::types::secure_types::SecureBigUint;
+    BigUintGenerator,
+    SecureBigUintGenerator
+};
 
 impl BigUintGenerator for OsRng {
     fn gen_biguint_below(&mut self, upper: &BigUint) -> BigUint {
@@ -49,4 +45,3 @@ impl SecureBigUintGenerator for OsRng {
         SecretBox::new(Box::new(SecureBigUint(value)))
     }
 }
-

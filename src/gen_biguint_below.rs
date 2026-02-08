@@ -44,7 +44,7 @@ pub fn gen_biguint_below_2(
     }
 }
 
-pub fn gen_biguint_below_3(
+pub fn gen_biguint_below_with_crypto_rng(
     rng: &mut (impl RngCore + CryptoRng),
     upper: &BigUint
 ) -> BigUint {

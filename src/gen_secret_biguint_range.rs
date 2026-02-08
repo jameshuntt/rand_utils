@@ -1,22 +1,14 @@
 // crates/shamirs_secret_sharing/src/rand_utils/gen_secret_biguint_range.rs
 
-use num_bigint::BigUint;
-
-use rand::{
-    CryptoRng,
-    RngCore
-};
-
-use secrecy::{
-    ExposeSecret,
-    SecretBox
-};
-
-use crate::gen_secret_biguint_below::gen_secret_biguint_below;
 use honest::types::secure_types::{
     SecretBigUint,
     SecureBigUint
 };
+use num_bigint::BigUint;
+use rand::{CryptoRng, RngCore};
+use secrecy::{ExposeSecret, SecretBox};
+
+use crate::gen_secret_biguint_below::gen_secret_biguint_below;
 
 pub fn gen_secret_biguint_range(
     rng: &mut (impl RngCore + CryptoRng),

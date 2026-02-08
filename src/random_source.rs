@@ -5,13 +5,11 @@ use num_bigint::{BigInt, BigUint};
 use num_traits::Zero;
 use secrecy::SecretBox;
 
-use crate::{
-    traits::{
-        BigUintGenerator,
-        SecureBigIntGenerator,
-        SecureBigUintGenerator,
-        SecureBigUintGenerator2
-    },
+use crate::traits::{
+    BigUintGenerator,
+    SecureBigIntGenerator,
+    SecureBigUintGenerator,
+    SecureBigUintGenerator2
 };
 use honest::types::secure_types::{
     SecretBigUint,

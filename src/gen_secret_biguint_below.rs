@@ -1,18 +1,12 @@
 // crates/shamirs_secret_sharing/src/rand_utils/gen_secret_biguint_below.rs
 
-use num_bigint::BigUint;
-
-use rand::{
-    CryptoRng,
-    RngCore
-};
-
-use secrecy::SecretBox;
-
 use honest::types::secure_types::{
     SecureBigUint,
     SecretBigUint
 };
+use num_bigint::BigUint;
+use rand::{CryptoRng, RngCore};
+use secrecy::SecretBox;
 
 pub fn gen_secret_biguint_below(
     rng: &mut (impl RngCore + CryptoRng),

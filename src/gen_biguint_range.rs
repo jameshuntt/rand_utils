@@ -1,11 +1,7 @@
 // crates/shamirs_secret_sharing/src/rand_utils/gen_biguint_range.rs
 
 use num_bigint::BigUint;
-
-use rand::{
-    CryptoRng,
-    RngCore
-};
+use rand::{CryptoRng, RngCore};
 
 use crate::gen_biguint_below::gen_biguint_below;
 
