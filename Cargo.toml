@@ -2,6 +2,7 @@
 name = "rand_utils"
 version = "0.1.1"
 edition = "2024"
+rust-version = "1.85"
 
 license = "MIT OR Apache-2.0"
 description = "helpers for large randon number generation"
